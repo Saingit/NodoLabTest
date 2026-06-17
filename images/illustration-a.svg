@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 260" fill="none">
+  <!-- Phone body -->
+  <rect x="110" y="20" width="120" height="200" rx="18" fill="#b8b0e8"/>
+  <rect x="118" y="36" width="104" height="148" rx="6" fill="#ddd9f7"/>
+  <!-- Gear large -->
+  <circle cx="170" cy="110" r="34" fill="#8878d4" opacity="0.85"/>
+  <circle cx="170" cy="110" r="20" fill="#ddd9f7"/>
+  <circle cx="170" cy="110" r="10" fill="#8878d4"/>
+  <!-- Gear teeth (simplified) -->
+  <rect x="164" y="72" width="12" height="10" rx="3" fill="#8878d4"/>
+  <rect x="164" y="138" width="12" height="10" rx="3" fill="#8878d4"/>
+  <rect x="132" y="104" width="10" height="12" rx="3" fill="#8878d4"/>
+  <rect x="198" y="104" width="10" height="12" rx="3" fill="#8878d4"/>
+  <!-- Lightbulb -->
+  <circle cx="240" cy="30" r="22" fill="#f9c94e" opacity="0.9"/>
+  <rect x="233" y="48" width="14" height="8" rx="2" fill="#e0a020"/>
+  <line x1="240" y1="14" x2="240" y2="8" stroke="#f9c94e" stroke-width="3" stroke-linecap="round"/>
+  <line x1="256" y1="20" x2="260" y2="16" stroke="#f9c94e" stroke-width="3" stroke-linecap="round"/>
+  <line x1="224" y1="20" x2="220" y2="16" stroke="#f9c94e" stroke-width="3" stroke-linecap="round"/>
+  <!-- Document card -->
+  <rect x="220" y="100" width="80" height="70" rx="8" fill="white" opacity="0.95"/>
+  <line x1="234" y1="118" x2="286" y2="118" stroke="#c5c0e0" stroke-width="3" stroke-linecap="round"/>
+  <line x1="234" y1="128" x2="278" y2="128" stroke="#c5c0e0" stroke-width="2" stroke-linecap="round"/>
+  <line x1="234" y1="137" x2="282" y2="137" stroke="#c5c0e0" stroke-width="2" stroke-linecap="round"/>
+  <line x1="234" y1="146" x2="268" y2="146" stroke="#c5c0e0" stroke-width="2" stroke-linecap="round"/>
+  <!-- Search icon on card -->
+  <circle cx="276" cy="106" r="10" fill="#8878d4"/>
+  <circle cx="276" cy="106" r="5" stroke="white" stroke-width="2" fill="none"/>
+  <line x1="279" y1="109" x2="283" y2="113" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <!-- Person (sitting) -->
+  <circle cx="80" cy="178" r="16" fill="#8878d4"/>
+  <!-- Body -->
+  <ellipse cx="80" cy="210" rx="18" ry="20" fill="#8878d4"/>
+  <!-- Legs -->
+  <path d="M65 225 Q55 238 68 242" stroke="#8878d4" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M95 225 Q105 238 94 244" stroke="#8878d4" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <!-- Laptop on lap -->
+  <rect x="58" y="215" width="44" height="26" rx="4" fill="#ddd9f7"/>
+  <rect x="62" y="219" width="36" height="18" rx="2" fill="#b8b0e8"/>
+  <!-- Dots decoration -->
+  <circle cx="30" cy="80" r="4" fill="#8878d4" opacity="0.4"/>
+  <circle cx="44" cy="68" r="3" fill="#8878d4" opacity="0.3"/>
+  <circle cx="300" cy="200" r="5" fill="#8878d4" opacity="0.35"/>
+  <circle cx="315" cy="185" r="3" fill="#8878d4" opacity="0.25"/>
+</svg>

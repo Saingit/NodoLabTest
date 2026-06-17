@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 260" fill="none">
+  <!-- Background circle (teal) -->
+  <circle cx="190" cy="140" r="95" fill="#6ecece" opacity="0.18"/>
+  <circle cx="190" cy="140" r="74" fill="#6ecece" opacity="0.15"/>
+
+  <!-- Browser window card -->
+  <rect x="80" y="55" width="190" height="150" rx="12" fill="white"/>
+  <rect x="80" y="55" width="190" height="150" rx="12" stroke="#e0e8e8" stroke-width="1.5"/>
+  <!-- Browser top bar -->
+  <rect x="80" y="55" width="190" height="30" rx="12" fill="#eaf4f4"/>
+  <rect x="80" y="72" width="190" height="13" fill="#eaf4f4"/>
+  <!-- Traffic lights -->
+  <circle cx="98" cy="70" r="5" fill="#ff7b7b" opacity="0.7"/>
+  <circle cx="112" cy="70" r="5" fill="#ffc95c" opacity="0.7"/>
+  <circle cx="126" cy="70" r="5" fill="#5cd68c" opacity="0.7"/>
+  <!-- Address bar -->
+  <rect x="140" y="62" width="114" height="16" rx="8" fill="white" opacity="0.8"/>
+
+  <!-- Content lines in browser -->
+  <!-- Row 1 placeholder blocks -->
+  <rect x="96" y="98" width="70" height="10" rx="3" fill="#b2dada"/>
+  <rect x="174" y="98" width="80" height="10" rx="3" fill="#b2dada"/>
+  <!-- Row 2 -->
+  <rect x="96" y="116" width="55" height="8" rx="3" fill="#cce8e8" opacity="0.8"/>
+  <rect x="159" y="116" width="95" height="8" rx="3" fill="#cce8e8" opacity="0.8"/>
+  <!-- Row 3 -->
+  <rect x="96" y="132" width="80" height="8" rx="3" fill="#cce8e8" opacity="0.7"/>
+  <rect x="184" y="132" width="68" height="8" rx="3" fill="#cce8e8" opacity="0.7"/>
+  <!-- Row 4 -->
+  <rect x="96" y="148" width="60" height="8" rx="3" fill="#daf0f0" opacity="0.8"/>
+  <rect x="164" y="148" width="84" height="8" rx="3" fill="#daf0f0" opacity="0.8"/>
+  <!-- Row 5 -->
+  <rect x="96" y="164" width="92" height="8" rx="3" fill="#daf0f0" opacity="0.7"/>
+  <rect x="196" y="164" width="52" height="8" rx="3" fill="#daf0f0" opacity="0.7"/>
+  <!-- Row 6 -->
+  <rect x="96" y="180" width="74" height="8" rx="3" fill="#e6f5f5" opacity="0.8"/>
+  <rect x="178" y="180" width="70" height="8" rx="3" fill="#e6f5f5" opacity="0.8"/>
+
+  <!-- Link icon badge (teal circle with chain) -->
+  <circle cx="168" cy="115" r="28" fill="#1fa8a8"/>
+  <!-- Chain/link icon -->
+  <path d="M158 109 Q162 104 168 108 Q174 112 170 117" stroke="white" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <path d="M166 113 Q170 108 176 112 Q182 116 178 121" stroke="white" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+
+  <!-- Small decorative circles -->
+  <circle cx="296" cy="65" r="12" fill="#6ecece" opacity="0.35"/>
+  <circle cx="316" cy="88" r="7" fill="#6ecece" opacity="0.25"/>
+  <circle cx="54" cy="185" r="9" fill="#6ecece" opacity="0.2"/>
+  <!-- Plus/cross decoration -->
+  <line x1="302" y1="155" x2="302" y2="167" stroke="#6ecece" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+  <line x1="296" y1="161" x2="308" y2="161" stroke="#6ecece" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+  <line x1="58" y1="68" x2="58" y2="78" stroke="#6ecece" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+  <line x1="53" y1="73" x2="63" y2="73" stroke="#6ecece" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+</svg>

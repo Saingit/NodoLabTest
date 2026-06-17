@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(sass --version 2>$null)",
+      "PowerShell(node --version 2>$null)",
+      "PowerShell(npx sass --version 2>$null)"
+    ]
+  }
+}

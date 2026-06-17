@@ -1,0 +1,231 @@
+// ============================================================
+// Content Block Component
+// ============================================================
+// Para adaptar a un nuevo cliente, edita únicamente la sección
+// "1. Configuración por cliente" — el resto del código no cambia.
+// ============================================================
+
+@use "sass:map";
+
+
+// ------------------------------------------------------------
+// 1. Configuración por cliente
+//    Cada tema define: fondo, color decorativo, colores de texto,
+//    si tiene sombra tipo card, radio de borde y tipo de decoración.
+// ------------------------------------------------------------
+
+$themes: (
+  "purple": (
+    bg:          #edeaf8,
+    deco-color:  #cdc6ee,
+    title-color: #1a1a2e,
+    text-color:  #44445a,
+    card:        false,
+    radius:      12px,
+    deco-type:   "blob",
+  ),
+  "teal": (
+    bg:          #f2f8f8,
+    deco-color:  #6ecece,
+    title-color: #1a2e2e,
+    text-color:  #3d5454,
+    card:        true,
+    radius:      20px,
+    deco-type:   "circles",
+  ),
+);
+
+
+// ------------------------------------------------------------
+// 2. Ajustes globales compartidos
+// ------------------------------------------------------------
+
+$font-stack:     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+$padding-block:  clamp(32px, 5vw, 56px);
+$padding-inline: clamp(28px, 5vw, 60px);
+$gap:            clamp(28px, 4vw, 52px);
+$max-width:      860px;
+
+
+// ------------------------------------------------------------
+// 3. Componente base
+//    Los h3/h4, p e img se estilizan desde el padre para que
+//    Moodle no rompa el layout al quitar clases del contenido.
+// ------------------------------------------------------------
+
+.content-block {
+  position: relative;
+  overflow: hidden;
+  font-family: $font-stack;
+  box-sizing: border-box;
+
+  // Contenedor interior: layout flex + centrado
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: $gap;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: $padding-block $padding-inline;
+    position: relative;
+    z-index: 1; // por encima de los pseudo-elementos decorativos
+  }
+
+  // Columna de texto
+  // Estilos aplicados via selector de hijo — sin clases en h3/p
+  &__text {
+    flex: 1 1 55%;
+
+    h3,
+    h4 {
+      font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+      font-weight: 700;
+      line-height: 1.25;
+      margin: 0 0 1rem;
+    }
+
+    p {
+      font-size: clamp(0.875rem, 1.5vw, 0.938rem);
+      line-height: 1.7;
+      margin: 0 0 0.75rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // Columna de imagen
+  // img estilizado desde el padre — sin clase en el elemento img
+  &__media {
+    flex: 0 0 38%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  // Base para pseudo-elementos decorativos
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+  }
+}
+
+
+// ------------------------------------------------------------
+// 4. Mixins de decoración de fondo
+//    Cada tipo de decoración es un mixin independiente.
+//    Para añadir una nueva variante, basta con crear un mixin
+//    y referenciarlo en $themes con su deco-type.
+// ------------------------------------------------------------
+
+@mixin deco-blob($color) {
+  &::before {
+    width: 260px;
+    height: 240px;
+    background: $color;
+    border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+    top: -60px;
+    right: -60px;
+    opacity: 0.75;
+  }
+
+  &::after {
+    width: 130px;
+    height: 120px;
+    background: $color;
+    border-radius: 45% 55% 38% 62% / 60% 44% 56% 40%;
+    bottom: -30px;
+    right: 32%;
+    opacity: 0.35;
+  }
+}
+
+@mixin deco-circles($color) {
+  &::before {
+    width: 88px;
+    height: 88px;
+    background: $color;
+    border-radius: 50%;
+    top: 20px;
+    right: 68px;
+    opacity: 0.4;
+  }
+
+  &::after {
+    width: 52px;
+    height: 52px;
+    background: $color;
+    border-radius: 50%;
+    top: 72px;
+    right: 20px;
+    opacity: 0.22;
+  }
+}
+
+
+// ------------------------------------------------------------
+// 5. Generación automática de temas desde el mapa $themes
+// ------------------------------------------------------------
+
+@each $name, $props in $themes {
+  $bg:        map.get($props, bg);
+  $deco:      map.get($props, deco-color);
+  $title:     map.get($props, title-color);
+  $text:      map.get($props, text-color);
+  $card:      map.get($props, card);
+  $radius:    map.get($props, radius);
+  $deco-type: map.get($props, deco-type);
+
+  .content-block--#{$name} {
+    background-color: $bg;
+    border-radius: $radius;
+
+    @if $card {
+      box-shadow: 0 4px 28px rgba(0, 0, 0, 0.08);
+    }
+
+    .content-block__text {
+      h3,
+      h4 {
+        color: $title;
+      }
+
+      p {
+        color: $text;
+      }
+    }
+
+    @if $deco-type == "blob" {
+      @include deco-blob($deco);
+    } @else if $deco-type == "circles" {
+      @include deco-circles($deco);
+    }
+  }
+}
+
+
+// ------------------------------------------------------------
+// 6. Responsive — móvil
+// ------------------------------------------------------------
+
+@media (max-width: 600px) {
+  .content-block__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content-block__media {
+    flex: 0 0 auto;
+    width: 60%;
+    order: -1; // ilustración arriba en móvil
+  }
+}

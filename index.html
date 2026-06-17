@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content Block — nodoLab Prueba Técnica</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Estilos de página solo para visualización del demo — no forman parte del componente */
+    body {
+      margin: 0;
+      padding: 40px 24px;
+      background: #f4f4f6;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .demo-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+    Design A — Tema purple
+    Para usar en Moodle: copiar el bloque .content-block completo.
+    El editor puede modificar los textos y reemplazar el <img>
+    sin afectar el layout, ya que no se depende de clases
+    aplicadas directamente sobre h3, p ni img.
+  ============================================================ -->
+
+  <div>
+    <p class="demo-label">Design A — tema: purple</p>
+
+    <div class="content-block content-block--purple">
+      <div class="content-block__inner">
+
+        <div class="content-block__text">
+          <h3>Lorem ipsum dolor sit</h3>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+            sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+            magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+            quis nostrud exerci tation ullamcorper.</p>
+          <p>¡Lorem ipsum dolor sit!</p>
+        </div>
+
+        <div class="content-block__media">
+          <img src="images/illustration-a.svg" alt="Ilustración tecnología">
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+    Design B — Tema teal
+    Mismo HTML, distinta clase modificadora en el wrapper.
+    Cambiar la clase content-block--purple por content-block--teal
+    es suficiente para aplicar la paleta del cliente B.
+  ============================================================ -->
+
+  <div>
+    <p class="demo-label">Design B — tema: teal</p>
+
+    <div class="content-block content-block--teal">
+      <div class="content-block__inner">
+
+        <div class="content-block__text">
+          <h3>Lorem ipsum dolor sit</h3>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+            sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+            magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+            quis nostrud exerci tation ullamcorper.</p>
+          <p>¡Lorem ipsum dolor sit!</p>
+        </div>
+
+        <div class="content-block__media">
+          <img src="images/illustration-b.svg" alt="Ilustración web">
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
